@@ -21,6 +21,15 @@ function clickme() {
   }
   catch(err) {
     console.log('Reached here bro', err)
+    location.href='https://staging.okcredit.app/merchant/v1/web/https%3A%2F%2Fpaylater.staging.okcredit.in%2Fonboarding'
+  }
+}
+  function clickMepo() {
+  try{
+    window.androidObj.navigate('https://staging.okcredit.app/merchant/v1/web/https%3A%2F%2Fpaylater.staging.okcredit.in%2Fonboarding')
+  }
+  catch(err) {
+    console.log('Reached here 22 bro', err)
   }
 }
 </script>
@@ -35,7 +44,7 @@ function clickme() {
   <input type="button" value="open custom link" onclick="clickme()"></input>
   </label>
 </form>
-<button type="button" onclick="location.href='https://staging.okcredit.app/merchant/v1/web/https%3A%2F%2Fpaylater.staging.okcredit.in%2Fonboarding'">Click Me!</button>
+<button type="button" onclick="clickMepo()">Click Me!</button>
 <p id="demo"></p>
 
 <script>

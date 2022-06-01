@@ -12,13 +12,22 @@ try {
 catch(error) {
   console.log(error)
 }
+  var text;
+
+function clickme() {
+  text=document.getElementById('link').value;
+  location.href=text
+}
 </script>
 <body>
 
 <h2>Use JavaScript to Change Text</h2>
 <p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
 <form>
-  <input value= />
+  <label>
+    Enter Link: 
+  <input id='link'></input>
+  </label>
 </form>
 <button type="button" onclick="location.href='https://staging.okcredit.app/merchant/v1/web/https%3A%2F%2Fpaylater.staging.okcredit.in%2Fonboarding'">Click Me!</button>
 <p id="demo"></p>

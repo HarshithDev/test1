@@ -16,7 +16,12 @@ catch(error) {
 
 function clickme() {
   text=document.getElementById('link').value;
-  location.href=text
+  try{
+    window.androidObj.navigate(text)
+  }
+  catch(err) {
+    console.log('Reached here bro', err)
+  }
 }
 </script>
 <body>

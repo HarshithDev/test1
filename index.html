@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <script>
+try {
+  window.androidObj = function AndroidClass() {}
+  window.setAuthToken = function (token) {
+    if (window.localStorage) {
+      window.localStorage.setItem('accessToken', token);
+    }
+  }
+}
+catch(error) {
+  console.log(error)
+}
+  </script>
 <body>
 
 <h2>Use iframe to Change Text</h2>

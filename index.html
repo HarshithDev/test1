@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <script>
+<script>
 try {
   window.androidObj = function AndroidClass() {}
   window.setAuthToken = function (token) {
@@ -12,20 +12,54 @@ try {
 catch(error) {
   console.log(error)
 }
-       function clickMepo2() {
+  var text;
+
+function clickme() {
+  text=document.getElementById('link').value;
   try{
-    window.androidObj.navigate('https://paylater.staging.okcredit.in/onboarding')
+    window.androidObj.navigate(text)
+  }
+  catch(err) {
+    console.log('Reached here bro', err)
+  }
+}
+  function clickMepo() {
+  try{
+    window.location.href = 'okcredit://merchant/v1/web/https%3A%2F%2Fpaylater.staging.okcredit.in'
   }
   catch(err) {
     console.log('Reached here 22 bro', err)
-    alert('in catch part zzz')
   }
 }
-  </script>
+  
+   function clickMepo2() {
+  try{
+    window.androidObj.navigate('okcredit://merchant/v1/web/https%3A%2F%2Fpaylater.staging.okcredit.in')
+  }
+  catch(err) {
+    console.log('Reached here 22 bro', err)
+    alert('in catch')
+  }
+}
+</script>
 <body>
 
-<h2>Use iframe to Change Text</h2>
-<iframe  frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" src="https://test2-nine-alpha.vercel.app/" title="W3Schools Free Online Web Tutorials"></iframe>
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+<form>
+  <label>
+    Enter Link: 
+  <input id='link'></input>
+  <input type="button" value="open custom link" onclick="clickme()"></input>
+  </label>
+</form>
+<button type="button" onclick="clickMepo()">Click Me!</button>
+<button type="button" onclick="clickMepo2()">Click Me part 2!</button>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script> 
+
 </body>
 </html>
-
